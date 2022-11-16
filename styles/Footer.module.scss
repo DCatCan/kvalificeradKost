@@ -1,0 +1,27 @@
+.fcontainer{
+    display: flex;
+    flex-direction: row;
+    min-height: 14vh;
+    background-color: white;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+.fcontainer ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+}
+.fcontainer ul li{
+    margin: 5px 0;
+}
+
+.spalt{
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
