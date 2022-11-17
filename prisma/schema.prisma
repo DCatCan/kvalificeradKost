@@ -1,37 +1,11 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-generator client {
-  provider = "prisma-client-js"
-}
-
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
-model Forfragning {
-  fId         String    @id @default(uuid())
-  fullName    String
-  email       String
-  telephone   String
-  serviceName Services? @relation(fields: [serviceId], references: [sId])
-  serviceId   Int       @unique
-  notified    Boolean
-}
-
-model Services {
-  sId          Int          @id @default(autoincrement())
-  serviceTitle String
-  description  String
-  price        Int
-  Forfragning  Forfragning?
-  Listpoints   Listpoints[]
-}
-
-model Listpoints {
-  id         Int       @id
-  listComent String
-  Service    Services? @relation(fields: [serviceId], references: [sId])
-  serviceId  Int?
+generator client {
+  provider = "prisma-client-js"
 }

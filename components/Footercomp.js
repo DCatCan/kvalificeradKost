@@ -1,5 +1,4 @@
 import LS from "../styles/Layout.module.scss";
-import Link from "next/Link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 

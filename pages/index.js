@@ -6,7 +6,7 @@ import prisma from "../data";
 import { useEffect, useState } from "react";
 import { Info1, Info2 } from "../components/Information";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   // const nyheter = await prisma.News.findMany();
   const tjanster = await prisma.Services.findMany();
   const ep = await prisma.listpoints.findMany();
@@ -15,6 +15,7 @@ export const getStaticProps = async () => {
     props: { tjanster, ep },
   };
 };
+
 async function handleSubmit(data) {
   const options = {
     method: "POST",
