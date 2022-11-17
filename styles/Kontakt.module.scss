@@ -1,0 +1,150 @@
+
+@import './abstract/variables';
+@import './abstract/functions';
+@import './abstract/fonts';
+@import './abstract/colors';
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+    input[type="email"]{
+        width: 300px;
+        height: 2.4rem;
+        
+        border-radius: 5px;
+        border: 0 ;
+        
+        font-weight: 500;
+        font-size: large;
+        
+        border-radius: 10px;
+        padding-inline-start: 10px;
+        margin-bottom: 2em;
+
+
+
+    }
+    input[type="text"]{
+        width: 300px;
+        height: 2.4rem;
+        border: 0 ;
+        margin-bottom: 2em;
+
+
+        border-radius: 5px;
+        padding-inline-start: 10px;
+        font-weight: 500;
+        font-size: large;
+        border-radius: 10px;
+    }
+    input[type="tel"]{
+        width: 300px;
+        height: 2.4rem;
+        padding-inline-start: 10px;
+        margin-bottom: 2em;
+
+
+        border-radius: 5px;
+        border: 0 ;
+        font-weight: 500;
+        font-size: large;
+        border-radius: 10px;
+    }
+
+    select{
+        padding-inline: 15px;
+
+        width: 300px;
+        height: 2.4rem;
+        border: 0 ;
+        font-weight: 500;
+        font-size: large;
+        border-radius: 10px;
+
+
+
+
+        
+    }
+
+    button[type=submit]{
+        margin-top: 3rem;
+        height: 2.4rem;
+        background-color: rgb(177, 180, 2);
+        border-radius: 10px;
+        font-size: large;
+        font-weight: 600;
+        color: white;
+        width: 300px;
+
+    }
+    h3{
+        color:white
+    }
+    @media screen and (max-width: 900px) {
+        width: 100%;
+            
+        
+        
+    }
+    @media screen and (max-width: 424px) {
+        width: 100%;
+            
+        
+        
+    }
+
+}
+
+
+
+.kontakt{
+    background-color: rgb(22, 25, 48);
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 800px;
+
+    &_info{
+        display: flex;
+        width: 100%;
+        padding: 2em 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(177, 180, 2);
+        min-height: 700px;
+        
+
+    }
+    h2{
+        font-size: 34px;
+        font-weight: 600;
+        color:white;
+        margin-bottom: 5px;
+        text-align: center;
+
+    }
+    h4{
+        font-size: 30px;
+        font-weight: 600;
+        color:rgb(22, 25, 48);
+        margin-bottom: 5px;
+
+    }
+    p{
+        margin: 0;
+        font-family: 'Anybody';
+        font-size: 22px;
+        color:white;
+
+    }
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        
+    }
+
+}

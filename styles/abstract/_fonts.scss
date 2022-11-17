@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,500;0,700;0,800;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@200;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,700;1,500&display=swap');
+
+$font-var: 12px;
+
+$font-sizes:(
+    1: $font-var*1,
+    2: $font-var*1.4,
+    3: $font-var*1.8,
+    4: $font-var*2.2,
+    5:$font-var*2.6,
+    6:$font-var*3
+);

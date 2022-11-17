@@ -1,0 +1,167 @@
+
+
+.carousel{
+  position: relative;
+  height: 700px;
+  width: 100%;
+  margin: 2em auto;
+  z-index: 50;
+  > * {
+    z-index: inherit;
+  }
+
+  > .Image{
+    width: 100%;
+    height: 100%;
+  }
+
+  &__nav{
+    background-color: rgba(0, 0, 0, 0.514);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 8px;
+  }
+
+  &__indicator{
+    border: 0;
+    border-radius: 20%;
+    width: 16px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.062);
+    margin: 0 10px;
+
+  }
+  &__slide{
+    z-index: 100;
+    position: absolute;
+    width: 80%;
+    padding: 0;
+    
+
+
+
+    > p {
+      width: 100%;
+      font-size: 20px;
+      font-weight: 600;
+      word-wrap: break-word;
+      overflow-y: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 4; /* number of lines to show */
+           line-clamp: 4; 
+   -webkit-box-orient: vertical;
+      color: rgb(255, 255, 255);
+      
+    }
+    > h3{
+      color: white;
+      font-size: 30px;
+    }
+    > a {
+      color: white;
+    }
+
+
+    
+  }
+  &__slide[data-visible=false]{
+    display: None;
+  }
+  &__slide[data-visible=true]{
+    display: block;
+  }
+
+  
+  
+  &__button{
+    z-index: 200 !important;
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    transform: translateY(-50%);
+    width: 6%;
+
+    &_left{
+      left: 0;
+
+    }
+    &_right{
+      right: 0;
+    }
+  }
+  &__button:hover{
+    background-color: rgba(0, 0, 0, 0.089);
+    transition: background-color ease-in 200ms;
+  }
+
+  &__track{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &-container{
+      background-color: rgb(22, 25, 48);
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      
+      
+    }
+
+  }
+  @media screen and (max-width: 645px) {
+    &__slide{
+      width: 75%;
+      > p {
+        font-size:19px;
+      }
+      > h3 {
+        font-size: 29px;
+      }
+
+    }
+    &__button{
+      display: none;
+  
+      &_left{
+        left: 0;
+  
+      }
+      &_right{
+        right: 0;
+      }
+    }
+    &__button:hover{
+      background-color: rgba(0, 0, 0, 0.089);
+      transition: background-color ease-in 200ms;
+    }
+
+}
+  
+
+}
+.active{
+  background-color: rgba(255, 255, 255, 0.747);
+}
+
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media screen {
+  
+}
