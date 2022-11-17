@@ -6,7 +6,7 @@ import prisma from "../data";
 import { useEffect, useState } from "react";
 import { Info1, Info2 } from "../components/Information";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   // const nyheter = await prisma.News.findMany();
   const tjanster = await prisma.Services.findMany();
   const ep = await prisma.listpoints.findMany();
@@ -26,7 +26,7 @@ async function handleSubmit(data) {
   const req = await fetch(`${server}/api/servicereq`, options);
 }
 
-export default function Home({ nyheter, tjanster, ep }) {
+export default function Home({ tjanster, ep }) {
   const [anyNews, setAnyNews] = useState(false);
   // useEffect(() => {
   //   if (nyheter.length > 0) {
